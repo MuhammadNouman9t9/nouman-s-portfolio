@@ -92,9 +92,14 @@ export const Hero = () => {
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative aspect-[4/5] max-w-md mx-auto">
-            <div className="absolute -inset-4 bg-gradient-accent opacity-20 blur-3xl" />
-            <div className="relative h-full w-full overflow-hidden border border-border bg-card grain">
+          <div className="relative aspect-[4/5] max-w-sm mx-auto group">
+            {/* Soft purple glow */}
+            <div className="absolute -inset-6 bg-gradient-accent opacity-30 blur-3xl rounded-[3rem] group-hover:opacity-50 transition-opacity duration-700" />
+            {/* Decorative ring */}
+            <div className="absolute -inset-2 rounded-3xl border border-primary/20" />
+
+            {/* Portrait */}
+            <div className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-elegant">
               <img
                 src={portrait}
                 alt="Muhammad Nouman, senior full stack developer portrait"
@@ -102,11 +107,21 @@ export const Hero = () => {
                 height={1280}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                <span>// karachi, pk</span>
+              {/* Subtle bottom fade for caption legibility */}
+              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-background/80 to-transparent" />
+              <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-foreground/80">
+                <span className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
+                  Karachi, PK
+                </span>
                 <span>v.2026</span>
               </div>
+            </div>
+
+            {/* Floating badge */}
+            <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-3 rounded-2xl shadow-glow font-display text-sm font-semibold flex items-center gap-2 border border-primary/40">
+              <span className="w-2 h-2 rounded-full bg-primary-foreground animate-glow-pulse" />
+              Open to work
             </div>
           </div>
         </motion.div>
