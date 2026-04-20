@@ -3,19 +3,50 @@ import { motion } from "framer-motion";
 const groups = [
   {
     title: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Redux / Zustand", "Vite"],
+    items: [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "React.js",
+      "Next.js",
+      "Angular",
+      "Vue.js",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Python", "REST", "GraphQL", "WebSockets"],
+    items: ["Node.js", "Express.js", "NestJS", "PHP", "Laravel", "Python", "Flask"],
   },
   {
-    title: "Data & Infra",
-    items: ["PostgreSQL", "MongoDB", "Redis", "AWS (EC2, S3, Lambda)", "Docker", "CI/CD", "Vercel"],
+    title: "AI / ML & Data",
+    items: ["Python", "Pandas", "LLMs", "Machine Learning", "AI Integration", "Data Pipelines"],
   },
   {
-    title: "Practices",
-    items: ["System Design", "Code Review", "Mentoring", "Agile / Scrum", "TDD", "Performance Audits"],
+    title: "Databases",
+    items: ["MySQL", "MongoDB", "SQL", "NoSQL"],
+  },
+  {
+    title: "APIs & Auth",
+    items: ["REST APIs", "GraphQL", "JWT Auth", "OAuth", "API Integration"],
+  },
+  {
+    title: "Cloud & DevOps",
+    items: ["AWS (EC2, S3, Lambda)", "Firebase", "Docker", "CI / CD"],
+  },
+  {
+    title: "Architecture",
+    items: ["Microservices", "System Design", "Scalable Backends"],
+  },
+  {
+    title: "CMS & eCommerce",
+    items: ["WordPress", "Elementor", "WooCommerce", "Shopify"],
+  },
+  {
+    title: "Tools & Collaboration",
+    items: ["Git", "GitHub", "Agile / Scrum", "Team Leadership", "Code Review"],
   },
 ];
 
@@ -33,7 +64,7 @@ export const Skills = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
         {groups.map((g, i) => (
           <motion.div
             key={g.title}
