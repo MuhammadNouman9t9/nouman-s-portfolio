@@ -1,15 +1,23 @@
 const items = [
   "React",
   "Next.js",
+  "Angular",
+  "Vue",
   "TypeScript",
   "Node.js",
-  "PostgreSQL",
+  "NestJS",
+  "Laravel",
+  "Python",
+  "Flask",
+  "Pandas",
+  "LLMs",
+  "MongoDB",
+  "MySQL",
   "AWS",
   "Docker",
   "GraphQL",
-  "Tailwind",
-  "Microservices",
-  "System Design",
+  "Shopify",
+  "WordPress",
 ];
 
 export const Marquee = () => {
