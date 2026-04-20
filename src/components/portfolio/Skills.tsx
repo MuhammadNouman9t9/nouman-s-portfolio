@@ -1,97 +1,102 @@
 import { motion } from "framer-motion";
+import {
+  Code2,
+  Server,
+  Brain,
+  Database,
+  Cloud,
+  Workflow,
+  ShoppingBag,
+  GitBranch,
+  Plug,
+} from "lucide-react";
 
 const groups = [
   {
+    icon: Code2,
     title: "Frontend",
-    items: [
-      "HTML5",
-      "CSS3",
-      "JavaScript (ES6+)",
-      "TypeScript",
-      "React.js",
-      "Next.js",
-      "Angular",
-      "Vue.js",
-      "Tailwind CSS",
-      "Bootstrap",
-    ],
+    summary: "React · Next · Vue · Angular · TS · Tailwind",
   },
   {
+    icon: Server,
     title: "Backend",
-    items: ["Node.js", "Express.js", "NestJS", "PHP", "Laravel", "Python", "Flask"],
+    summary: "Node · NestJS · Laravel · Flask",
   },
   {
-    title: "AI / ML & Data",
-    items: ["Python", "Pandas", "LLMs", "Machine Learning", "AI Integration", "Data Pipelines"],
+    icon: Brain,
+    title: "AI / ML",
+    summary: "Python · LLMs · Pandas · ML",
   },
   {
+    icon: Database,
     title: "Databases",
-    items: ["MySQL", "MongoDB", "SQL", "NoSQL"],
+    summary: "MySQL · MongoDB · SQL · NoSQL",
   },
   {
+    icon: Plug,
     title: "APIs & Auth",
-    items: ["REST APIs", "GraphQL", "JWT Auth", "OAuth", "API Integration"],
+    summary: "REST · GraphQL · JWT · OAuth",
   },
   {
+    icon: Cloud,
     title: "Cloud & DevOps",
-    items: ["AWS (EC2, S3, Lambda)", "Firebase", "Docker", "CI / CD"],
+    summary: "AWS · Firebase · Docker · CI/CD",
   },
   {
+    icon: Workflow,
     title: "Architecture",
-    items: ["Microservices", "System Design", "Scalable Backends"],
+    summary: "Microservices · System Design",
   },
   {
+    icon: ShoppingBag,
     title: "CMS & eCommerce",
-    items: ["WordPress", "Elementor", "WooCommerce", "Shopify"],
+    summary: "WordPress · WooCommerce · Shopify",
   },
   {
-    title: "Tools & Collaboration",
-    items: ["Git", "GitHub", "Agile / Scrum", "Team Leadership", "Code Review"],
+    icon: GitBranch,
+    title: "Tools",
+    summary: "Git · GitHub · Agile · Code Review",
   },
 ];
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-32 max-w-7xl mx-auto px-6 lg:px-10">
-      <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
-        <div>
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">
-            02 — Capabilities
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-            A toolkit refined across 40+ shipped products.
-          </h2>
-        </div>
+    <section id="skills" className="py-24 max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="mb-12">
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-4">
+          02 — Capabilities
+        </p>
+        <h2 className="font-display text-3xl md:text-5xl font-semibold tracking-tight max-w-2xl">
+          What I work with.
+        </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
-        {groups.map((g, i) => (
-          <motion.div
-            key={g.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-background p-8 lg:p-10 group hover:bg-card transition-colors duration-500"
-          >
-            <div className="flex items-baseline justify-between mb-6">
-              <h3 className="font-display text-2xl font-semibold">{g.title}</h3>
-              <span className="font-mono text-xs text-muted-foreground">
-                0{i + 1}
-              </span>
-            </div>
-            <ul className="flex flex-wrap gap-2">
-              {g.items.map((item) => (
-                <li
-                  key={item}
-                  className="text-sm border border-border px-3 py-1.5 text-muted-foreground group-hover:border-primary/30 group-hover:text-foreground transition-all duration-300"
-                >
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        {groups.map((g, i) => {
+          const Icon = g.icon;
+          return (
+            <motion.div
+              key={g.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="bg-background p-6 lg:p-7 group hover:bg-card transition-colors duration-300 flex items-start gap-4"
+            >
+              <div className="shrink-0 w-11 h-11 border border-border flex items-center justify-center text-primary group-hover:border-primary/50 group-hover:bg-primary/5 transition-all duration-300">
+                <Icon size={20} strokeWidth={1.6} />
+              </div>
+              <div className="min-w-0">
+                <h3 className="font-display text-lg font-semibold tracking-tight">
+                  {g.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  {g.summary}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
