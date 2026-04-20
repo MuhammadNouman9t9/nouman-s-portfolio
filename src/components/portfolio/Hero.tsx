@@ -100,7 +100,7 @@ export const Hero = () => {
                 alt="Muhammad Nouman, senior full stack developer portrait"
                 width={1024}
                 height={1280}
-                className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
