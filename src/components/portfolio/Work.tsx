@@ -1,5 +1,6 @@
-import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUpRight, Plus } from "lucide-react";
 
 const projects = [
   {
@@ -37,6 +38,42 @@ const projects = [
     desc: "Block-based content platform with collaborative editing, used by 80+ content teams.",
     tags: ["TypeScript", "Yjs", "Postgres", "Docker"],
     gradient: "from-purple-500/25 via-primary/10 to-transparent",
+  },
+  {
+    n: "05",
+    title: "Pulse Analytics",
+    role: "Senior Engineer",
+    year: "2024",
+    desc: "Real-time product analytics with custom funnels, cohorts, and 1B+ events ingested per month.",
+    tags: ["Next.js", "ClickHouse", "Kafka", "TS"],
+    gradient: "from-indigo-500/25 via-primary/10 to-transparent",
+  },
+  {
+    n: "06",
+    title: "Mosaic AI Studio",
+    role: "Full Stack + AI",
+    year: "2024",
+    desc: "LLM-powered content workflow tool with RAG pipelines, agents, and team collaboration.",
+    tags: ["Python", "LangChain", "React", "Postgres"],
+    gradient: "from-pink-500/25 via-primary/10 to-transparent",
+  },
+  {
+    n: "07",
+    title: "Drift eCommerce",
+    role: "Tech Lead",
+    year: "2022",
+    desc: "Shopify Plus migration for a fashion brand — 3x faster checkout and 40% lift in conversion.",
+    tags: ["Shopify", "Hydrogen", "GraphQL", "Stripe"],
+    gradient: "from-rose-500/25 via-primary/10 to-transparent",
+  },
+  {
+    n: "08",
+    title: "Ledger SaaS",
+    role: "Backend Lead",
+    year: "2021",
+    desc: "Multi-tenant accounting platform with double-entry bookkeeping and role-based audit trails.",
+    tags: ["NestJS", "PostgreSQL", "Docker", "AWS"],
+    gradient: "from-emerald-500/25 via-primary/10 to-transparent",
   },
 ];
 
