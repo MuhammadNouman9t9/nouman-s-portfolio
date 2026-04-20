@@ -37,21 +37,6 @@ export const About = () => {
             with care, and write about the trade-offs that shape good systems.
           </p>
 
-          <div className="grid grid-cols-2 gap-4 pt-6">
-            {[
-              { k: "Based", v: "Karachi, PK" },
-              { k: "Focus", v: "Web platforms" },
-              { k: "Stack", v: "TS · React · Node" },
-              { k: "Open to", v: "Senior / Lead roles" },
-            ].map((row) => (
-              <div key={row.k} className="border-t border-border pt-3">
-                <div className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  {row.k}
-                </div>
-                <div className="text-foreground mt-1">{row.v}</div>
-              </div>
-            ))}
-          </div>
         </motion.div>
       </div>
     </section>
