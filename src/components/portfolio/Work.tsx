@@ -52,7 +52,7 @@ export const Work = () => {
         </h2>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
         {projects.map((p, i) => (
           <motion.a
             key={p.n}
