@@ -64,7 +64,7 @@ export const Skills = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-px bg-border border border-border">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
         {groups.map((g, i) => (
           <motion.div
             key={g.title}
