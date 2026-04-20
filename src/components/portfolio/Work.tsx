@@ -52,7 +52,7 @@ export const Work = () => {
         </h2>
       </div>
 
-      <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
         {projects.map((p, i) => (
           <motion.a
             key={p.n}
@@ -66,24 +66,24 @@ export const Work = () => {
             {/* Visual header */}
             <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden border-b border-border`}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.2),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="absolute top-5 left-5 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              <div className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                 {p.n} / 04
               </div>
-              <div className="absolute top-5 right-5 w-9 h-9 border border-border bg-background/40 backdrop-blur flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-500">
-                <ArrowUpRight size={16} strokeWidth={1.8} className="group-hover:rotate-12 transition-transform" />
+              <div className="absolute top-4 right-4 w-8 h-8 border border-border bg-background/40 backdrop-blur flex items-center justify-center text-foreground group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-500">
+                <ArrowUpRight size={14} strokeWidth={1.8} className="group-hover:rotate-12 transition-transform" />
               </div>
-              <div className="absolute bottom-5 left-5 right-5 font-display text-3xl md:text-4xl font-semibold tracking-tight leading-[1.05] text-foreground">
+              <div className="absolute bottom-4 left-4 right-4 font-display text-xl lg:text-2xl font-semibold tracking-tight leading-[1.1] text-foreground">
                 {p.title.split(" — ")[0]}
               </div>
             </div>
 
             {/* Content */}
-            <div className="p-6 lg:p-7 flex flex-col flex-1">
-              <div className="flex items-center justify-between text-xs font-mono uppercase tracking-widest text-muted-foreground mb-4">
+            <div className="p-5 flex flex-col flex-1">
+              <div className="flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-muted-foreground mb-3">
                 <span>{p.role}</span>
                 <span>{p.year}</span>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6 flex-1">
+              <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
                 {p.desc}
               </p>
               <div className="flex flex-wrap gap-1.5 pt-4 border-t border-border">
