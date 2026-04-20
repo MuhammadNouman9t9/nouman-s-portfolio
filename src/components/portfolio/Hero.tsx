@@ -112,7 +112,7 @@ export const Hero = () => {
               <div className="absolute bottom-4 left-5 right-5 flex items-center justify-between font-mono text-[10px] uppercase tracking-widest text-foreground/80">
                 <span className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary animate-glow-pulse" />
-                  Karachi, PK
+                  Lahore, PK
                 </span>
                 <span>v.2026</span>
               </div>

@@ -66,7 +66,7 @@ export const Contact = () => {
 
         <footer className="mt-32 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-4 font-mono text-xs text-muted-foreground">
           <span>© 2026 Muhammad Nouman. Crafted with intent.</span>
-          <span>Karachi, PK · UTC+5</span>
+          <span>Lahore, PK · UTC+5</span>
         </footer>
       </div>
     </section>
