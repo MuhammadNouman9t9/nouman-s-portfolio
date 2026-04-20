@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Download } from "lucide-react";
 import portrait from "@/assets/nouman-portrait.jpg";
 
 export const Hero = () => {
@@ -55,10 +56,12 @@ export const Hero = () => {
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center gap-3 border border-border px-7 py-4 font-medium hover:border-primary/50 hover:text-primary transition-all duration-300"
+              href="/muhammad-nouman-cv.pdf"
+              download
+              className="group inline-flex items-center gap-3 border border-border px-7 py-4 font-medium hover:border-primary/50 hover:text-primary transition-all duration-300"
             >
-              Get in touch
+              <Download size={16} strokeWidth={1.8} />
+              Download CV
             </a>
           </motion.div>
 
@@ -70,7 +73,7 @@ export const Hero = () => {
           >
             {[
               { v: "7+", l: "Years" },
-              { v: "40+", l: "Projects" },
+              { v: "200+", l: "Projects" },
               { v: "12", l: "Industries" },
             ].map((s) => (
               <div key={s.l} className="border-l border-border pl-4">
