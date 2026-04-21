@@ -166,7 +166,7 @@ export const Hero = () => {
               <span className="w-2 h-2 rounded-full bg-primary-foreground animate-glow-pulse" />
               Open to work
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
