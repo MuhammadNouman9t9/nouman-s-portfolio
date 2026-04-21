@@ -6,15 +6,6 @@ import {
   Globe,
   Lightbulb,
   Send,
-  Code,
-  Server,
-  Brain,
-  Database,
-  Plug,
-  Cloud,
-  Network,
-  ShoppingBag,
-  GitBranch,
 } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
@@ -45,53 +36,6 @@ const techStack = [
   { name: "AWS", color: "#FF9900", letter: "aws" },
 ];
 
-const expertise = [
-  {
-    icon: Code,
-    title: "Frontend",
-    items: ["React", "Next", "Vue", "Angular", "TS", "Tailwind"],
-  },
-  {
-    icon: Server,
-    title: "Backend",
-    items: ["Node", "NestJS", "Laravel", "Flask"],
-  },
-  {
-    icon: Brain,
-    title: "AI / ML",
-    items: ["Python", "LLMs", "Pandas", "ML"],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    items: ["MySQL", "MongoDB", "SQL", "NoSQL"],
-  },
-  {
-    icon: Plug,
-    title: "APIs & Auth",
-    items: ["REST", "GraphQL", "JWT", "OAuth"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    items: ["AWS", "Firebase", "Docker", "CI/CD"],
-  },
-  {
-    icon: Network,
-    title: "Architecture",
-    items: ["Microservices", "System Design"],
-  },
-  {
-    icon: ShoppingBag,
-    title: "CMS & eCommerce",
-    items: ["WordPress", "WooCommerce", "Shopify"],
-  },
-  {
-    icon: GitBranch,
-    title: "Tools",
-    items: ["Git", "GitHub", "Agile", "Code Review"],
-  },
-];
 
 const stats = [
   { icon: Award, value: "8+", label: "Years of Experience" },
@@ -259,53 +203,6 @@ export const About = () => {
         </div>
       </motion.div>
 
-      {/* Expertise */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="mt-16"
-      >
-        <div className="mb-8">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-3">
-            02 — Capabilities
-          </p>
-          <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
-            What I work with.
-          </h3>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-xl overflow-hidden">
-          {expertise.map((e, i) => {
-            const Icon = e.icon;
-            return (
-              <motion.div
-                key={e.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.04 }}
-                className="group relative bg-card hover:bg-card/60 p-6 transition-colors duration-300"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="shrink-0 w-11 h-11 rounded-lg border border-primary/30 bg-primary/5 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
-                    <Icon size={20} className="text-primary" strokeWidth={1.6} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h4 className="font-display text-lg font-semibold tracking-tight text-foreground mb-1">
-                      {e.title}
-                    </h4>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {e.items.join(" · ")}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </motion.div>
     </section>
   );
 };
