@@ -6,15 +6,6 @@ import {
   Globe,
   Lightbulb,
   Send,
-  Code,
-  Server,
-  Brain,
-  Database,
-  Plug,
-  Cloud,
-  Network,
-  ShoppingBag,
-  GitBranch,
 } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
