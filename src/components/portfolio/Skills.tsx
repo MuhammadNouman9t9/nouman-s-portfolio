@@ -56,7 +56,7 @@ const techs: Tech[] = [
   { name: "Shopify", Icon: SiShopify, color: "#7AB55C" },
   { name: "Git", Icon: SiGit, color: "#F05032" },
   { name: "Linux", Icon: SiLinux, color: "#FCC624" },
-  { name: "AWS", Icon: SiAmazon, color: "#FF9900" },
+  { name: "AWS", Icon: FaAws, color: "#FF9900" },
 ];
 
 const TechCard = ({ name, Icon, color }: Tech) => (
