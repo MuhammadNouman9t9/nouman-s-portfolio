@@ -1,95 +1,77 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import portrait from "@/assets/nouman-portrait.jpg";
+import { motion } from "framer-motion";
 
 export const About = () => {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const smooth = useSpring(scrollYProgress, { stiffness: 80, damping: 20 });
-  const portraitY = useTransform(smooth, [0, 1], [60, -60]);
-  const portraitScale = useTransform(smooth, [0, 0.5, 1], [0.95, 1.02, 0.98]);
-  const glowScale = useTransform(smooth, [0, 0.5, 1], [0.9, 1.15, 1]);
-
   return (
     <section
-      ref={ref}
       id="about"
-      className="relative py-32 max-w-7xl mx-auto px-6 lg:px-10 overflow-hidden"
+      className="relative py-32 max-w-5xl mx-auto px-6 lg:px-10"
     >
-      <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-        {/* Left — Portrait */}
-        <motion.div
-          style={{ y: portraitY, scale: portraitScale }}
-          className="lg:col-span-5 relative"
-        >
-          <div className="relative aspect-[4/5] max-w-md mx-auto lg:mx-0 group">
-            {/* Animated glow blob */}
-            <motion.div
-              style={{ scale: glowScale }}
-              className="absolute -inset-10 bg-gradient-accent opacity-40 blur-3xl rounded-full"
-            />
-            {/* Floating purple dot like reference */}
-            <motion.div
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-2 left-6 w-6 h-6 rounded-full bg-primary shadow-glow z-10"
-            />
-            {/* Decorative ring */}
-            <div className="absolute -inset-2 rounded-3xl border border-primary/20" />
-            {/* Portrait */}
-            <div className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-elegant">
-              <img
-                src={portrait}
-                alt="Muhammad Nouman portrait"
-                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-10"
+      >
+        01 — About me
+      </motion.p>
+
+      <motion.h2
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+        className="font-display text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.25] text-foreground max-w-4xl"
+      >
+        I'm{" "}
+        <span className="text-gradient-accent font-semibold">Muhammad Nouman</span>
+        , a senior full stack developer with{" "}
+        <span className="text-foreground">7+ years</span> shipping production
+        systems for startups, agencies, and scale-ups.
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, delay: 0.15 }}
+        className="mt-10 space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl"
+      >
+        <p>
+          I architect end-to-end — from database schemas and API contracts to
+          interface design and deployment pipelines. My focus is on writing
+          software that's maintainable on day 1000, not just day 1.
+        </p>
+        <p>
+          I care about{" "}
+          <span className="text-foreground">DX, performance, and accessibility</span>{" "}
+          in equal measure, and I treat craft as a discipline.
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7, delay: 0.3 }}
+        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-10 border-t border-border"
+      >
+        {[
+          { v: "7+", l: "Years" },
+          { v: "200+", l: "Projects" },
+          { v: "12", l: "Industries" },
+          { v: "30+", l: "Clients" },
+        ].map((s) => (
+          <div key={s.l}>
+            <div className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
+              {s.v}
             </div>
-            {/* Corner accent */}
-            <div className="absolute -bottom-3 -right-3 w-20 h-20 border-r-2 border-b-2 border-primary/50 rounded-br-3xl" />
-          </div>
-        </motion.div>
-
-        {/* Right — Text */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="lg:col-span-7 space-y-8"
-        >
-          <p className="font-mono text-xs uppercase tracking-[0.4em] text-primary">
-            01 — About me
-          </p>
-
-          <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-medium tracking-tight leading-[1.2] text-foreground">
-            I am{" "}
-            <span className="text-gradient-accent font-semibold">Muhammad Nouman</span>
-            , a senior full stack developer focused on building{" "}
-            <span className="text-foreground/90">scalable, secure, and maintainable</span>{" "}
-            web platforms. I architect end-to-end systems — from databases and APIs to
-            pixel-perfect interfaces and deployment pipelines.
-          </h2>
-
-          <div className="grid grid-cols-2 gap-6 pt-6 max-w-md">
-            <div className="border-l-2 border-primary/60 pl-4">
-              <div className="font-display text-2xl font-semibold">7+</div>
-              <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mt-1">
-                Years
-              </div>
-            </div>
-            <div className="border-l-2 border-primary/60 pl-4">
-              <div className="font-display text-2xl font-semibold">200+</div>
-              <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mt-1">
-                Projects
-              </div>
+            <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mt-2">
+              {s.l}
             </div>
           </div>
-        </motion.div>
-      </div>
+        ))}
+      </motion.div>
     </section>
   );
 };
