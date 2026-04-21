@@ -83,21 +83,6 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.45 }}
             className="flex flex-wrap items-center gap-4 pt-2"
           >
-            <a
-              href="#work"
-              className="group inline-flex items-center gap-3 bg-primary text-primary-foreground px-7 py-4 font-medium hover:shadow-glow transition-all duration-500 ease-smooth"
-            >
-              View selected work
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
-            <a
-              href="/muhammad-nouman-cv.pdf"
-              download
-              className="group inline-flex items-center gap-3 border border-border px-7 py-4 font-medium hover:border-primary/50 hover:text-primary transition-all duration-300"
-            >
-              <Download size={16} strokeWidth={1.8} />
-              Download CV
-            </a>
           </motion.div>
 
           <motion.div
