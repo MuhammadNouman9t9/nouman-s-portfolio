@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Download } from "lucide-react";
 import portrait from "@/assets/nouman-portrait.jpg";
 
 export const Hero = () => {
@@ -77,13 +76,7 @@ export const Hero = () => {
             scalable web platforms — from architecture to pixel-perfect interfaces.
           </motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.45 }}
-            className="flex flex-wrap items-center gap-4 pt-2"
-          >
-          </motion.div>
+
 
           <motion.div
             initial={{ opacity: 0 }}
