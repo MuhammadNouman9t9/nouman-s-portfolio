@@ -267,14 +267,16 @@ export const About = () => {
         transition={{ duration: 0.6 }}
         className="mt-16"
       >
-        <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
-            ✦ Expertise
-          </span>
-          <div className="flex-1 h-px bg-border" />
+        <div className="mb-8">
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-3">
+            02 — Capabilities
+          </p>
+          <h3 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+            What I work with.
+          </h3>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border rounded-xl overflow-hidden">
           {expertise.map((e, i) => {
             const Icon = e.icon;
             return (
@@ -283,19 +285,22 @@ export const About = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                whileHover={{ y: -4 }}
-                className="group relative bg-card border border-border hover:border-primary/40 rounded-xl p-5 transition-all duration-300"
+                transition={{ duration: 0.4, delay: i * 0.04 }}
+                className="group relative bg-card hover:bg-card/60 p-6 transition-colors duration-300"
               >
-                <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
-                  <Icon size={18} className="text-primary" strokeWidth={1.8} />
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0 w-11 h-11 rounded-lg border border-primary/30 bg-primary/5 flex items-center justify-center group-hover:bg-primary/15 transition-colors">
+                    <Icon size={20} className="text-primary" strokeWidth={1.6} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-display text-lg font-semibold tracking-tight text-foreground mb-1">
+                      {e.title}
+                    </h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {e.items.join(" · ")}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="font-display text-sm font-semibold tracking-tight text-foreground mb-2">
-                  {e.title}
-                </h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {e.desc}
-                </p>
               </motion.div>
             );
           })}
