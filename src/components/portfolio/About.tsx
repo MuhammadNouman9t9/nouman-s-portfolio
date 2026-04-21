@@ -159,50 +159,6 @@ export const About = () => {
         </motion.div>
       </div>
 
-      {/* Tech Stack */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-        className="mt-20"
-      >
-        <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
-            {"</>"} Tech Stack
-          </span>
-          <div className="flex-1 h-px bg-border" />
-        </div>
-
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-3">
-          {techStack.map((tech, i) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: i * 0.02 }}
-              whileHover={{ y: -4 }}
-              className="group flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
-            >
-              <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm"
-                style={{
-                  background: `${tech.color}20`,
-                  color: tech.color,
-                  border: `1px solid ${tech.color}40`,
-                }}
-              >
-                {tech.letter}
-              </div>
-              <span className="text-[10px] text-muted-foreground group-hover:text-foreground transition-colors text-center leading-tight">
-                {tech.name}
-              </span>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
     </section>
   );
 };
