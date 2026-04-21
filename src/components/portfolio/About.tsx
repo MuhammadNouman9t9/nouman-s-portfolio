@@ -6,13 +6,15 @@ import {
   Globe,
   Lightbulb,
   Send,
-  Layers,
+  Code,
   Server,
   Brain,
-  MessageSquare,
   Database,
+  Plug,
   Cloud,
+  Network,
   ShoppingBag,
+  GitBranch,
 } from "lucide-react";
 import avatar from "@/assets/avatar.jpg";
 
@@ -45,39 +47,49 @@ const techStack = [
 
 const expertise = [
   {
-    icon: Layers,
-    title: "Full Stack Development",
-    desc: "Building modern, responsive web applications using JavaScript/TypeScript ecosystem and robust backend technologies.",
+    icon: Code,
+    title: "Frontend",
+    items: ["React", "Next", "Vue", "Angular", "TS", "Tailwind"],
   },
   {
     icon: Server,
-    title: "Backend & APIs",
-    desc: "Designing and developing scalable REST APIs and microservices using Node.js, Express.js, NestJS, Flask, and FastAPI.",
+    title: "Backend",
+    items: ["Node", "NestJS", "Laravel", "Flask"],
   },
   {
     icon: Brain,
-    title: "AI & Machine Learning",
-    desc: "Developing intelligent solutions with ML models, data processing, and automation using Python, Pandas, and cutting-edge tools.",
-  },
-  {
-    icon: MessageSquare,
-    title: "LLM & AI Applications",
-    desc: "Building chatbots and AI apps using LLMs, RAG, embeddings, vector databases, and prompt engineering techniques.",
+    title: "AI / ML",
+    items: ["Python", "LLMs", "Pandas", "ML"],
   },
   {
     icon: Database,
     title: "Databases",
-    desc: "Working with SQL & NoSQL databases like MySQL, MongoDB and implementing GraphQL for efficient data handling.",
+    items: ["MySQL", "MongoDB", "SQL", "NoSQL"],
+  },
+  {
+    icon: Plug,
+    title: "APIs & Auth",
+    items: ["REST", "GraphQL", "JWT", "OAuth"],
   },
   {
     icon: Cloud,
-    title: "DevOps & Deployment",
-    desc: "Containerization with Docker, deployment on Firebase, CI/CD workflows and cloud infrastructure management.",
+    title: "Cloud & DevOps",
+    items: ["AWS", "Firebase", "Docker", "CI/CD"],
+  },
+  {
+    icon: Network,
+    title: "Architecture",
+    items: ["Microservices", "System Design"],
   },
   {
     icon: ShoppingBag,
     title: "CMS & eCommerce",
-    desc: "Building and managing websites using WordPress and Shopify with complete customization and integrations.",
+    items: ["WordPress", "WooCommerce", "Shopify"],
+  },
+  {
+    icon: GitBranch,
+    title: "Tools",
+    items: ["Git", "GitHub", "Agile", "Code Review"],
   },
 ];
 
