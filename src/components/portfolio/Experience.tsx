@@ -123,8 +123,8 @@ export const Experience = () => {
         <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
           Seven years, one obsession: shipping well.
         </h2>
-          </div>
-          )}
+      </div>
+
 
       <div ref={ref} className="relative">
         {/* Timeline track */}
