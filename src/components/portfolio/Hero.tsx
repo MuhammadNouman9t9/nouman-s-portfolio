@@ -1,10 +1,45 @@
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { Download } from "lucide-react";
 import portrait from "@/assets/nouman-portrait.jpg";
 
 export const Hero = () => {
+  const portraitRef = useRef<HTMLDivElement>(null);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth spring-driven parallax values
+  const springConfig = { stiffness: 120, damping: 18, mass: 0.6 };
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-12, 12]), springConfig);
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [10, -10]), springConfig);
+  const translateX = useSpring(useTransform(mouseX, [-0.5, 0.5], [-12, 12]), springConfig);
+  const translateY = useSpring(useTransform(mouseY, [-0.5, 0.5], [-10, 10]), springConfig);
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = portraitRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    // normalize relative to the portrait center in window
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    // Use wider range so mouse across whole viewport influences it
+    const nx = (e.clientX - cx) / window.innerWidth;
+    const ny = (e.clientY - cy) / window.innerHeight;
+    mouseX.set(Math.max(-0.5, Math.min(0.5, nx)));
+    mouseY.set(Math.max(-0.5, Math.min(0.5, ny)));
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
   return (
-    <section id="top" className="relative min-h-screen pt-28 pb-20 overflow-hidden">
+    <section
+      id="top"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="relative min-h-screen pt-28 pb-20 overflow-hidden"
+    >
       <div className="absolute inset-0 bg-gradient-glow pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-12 gap-12 items-center">
@@ -87,19 +122,27 @@ export const Hero = () => {
         </div>
 
         <motion.div
+          ref={portraitRef}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          style={{ perspective: 1000 }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative aspect-[4/5] max-w-sm mx-auto group">
-            {/* Soft purple glow */}
+          <motion.div
+            style={{ rotateX, rotateY, x: translateX, y: translateY, transformStyle: "preserve-3d" }}
+            className="relative aspect-[4/5] max-w-sm mx-auto group"
+          >
+            {/* Soft purple glow — follows tilt */}
             <div className="absolute -inset-6 bg-gradient-accent opacity-30 blur-3xl rounded-[3rem] group-hover:opacity-50 transition-opacity duration-700" />
             {/* Decorative ring */}
             <div className="absolute -inset-2 rounded-3xl border border-primary/20" />
 
             {/* Portrait */}
-            <div className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-elegant">
+            <div
+              className="relative h-full w-full overflow-hidden rounded-3xl border border-border bg-card shadow-elegant"
+              style={{ transform: "translateZ(40px)" }}
+            >
               <img
                 src={portrait}
                 alt="Muhammad Nouman, senior full stack developer portrait"
@@ -123,7 +166,7 @@ export const Hero = () => {
               <span className="w-2 h-2 rounded-full bg-primary-foreground animate-glow-pulse" />
               Open to work
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

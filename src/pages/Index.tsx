@@ -6,6 +6,7 @@ import { Skills } from "@/components/portfolio/Skills";
 import { Work } from "@/components/portfolio/Work";
 import { Experience } from "@/components/portfolio/Experience";
 import { Contact } from "@/components/portfolio/Contact";
+import { FloatingCV } from "@/components/portfolio/FloatingCV";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <Work />
       <Experience />
       <Contact />
+      <FloatingCV />
     </main>
   );
 };
