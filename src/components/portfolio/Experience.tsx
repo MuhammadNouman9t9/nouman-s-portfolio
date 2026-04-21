@@ -42,10 +42,7 @@ const roles = [
     company: "Freelance",
     desc: "Built custom WordPress and React sites for SMBs. First taste of production responsibility.",
     icon: Code2,
-    metrics: [
-      { v: "30+", l: "Sites delivered" },
-      { v: "2 yrs", l: "Solo journey" },
-    ],
+    metrics: [],
   },
 ];
 
