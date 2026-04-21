@@ -83,7 +83,7 @@ export const Hero = () => {
           >
             {[
               { v: "8+", l: "Years" },
-              { v: "50+", l: "AI / ML projects" },
+              { v: "189+", l: "AI / ML projects" },
               { v: "20+", l: "LLM apps" },
             ].map((s) => (
               <div key={s.l} className="border-l border-border pl-4">
