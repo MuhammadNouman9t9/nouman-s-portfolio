@@ -108,14 +108,59 @@ const RoleCard = ({
 
 export const Experience = () => {
   const ref = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start 70%", "end 30%"],
   });
   const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
+  // Section-wide progress drives the floating avatar
+  const { scrollYProgress: sectionProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+  const smoothProgress = useSpring(sectionProgress, {
+    stiffness: 80,
+    damping: 20,
+    mass: 0.5,
+  });
+  const avatarRotate = useTransform(smoothProgress, [0, 1], [-15, 15]);
+  const avatarScale = useTransform(smoothProgress, [0, 0.5, 1], [0.85, 1.05, 0.9]);
+  const avatarY = useTransform(smoothProgress, [0, 1], [40, -40]);
+  const avatarOpacity = useTransform(smoothProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
+
   return (
-    <section id="experience" className="py-32 max-w-7xl mx-auto px-6 lg:px-10 relative">
+    <section
+      ref={sectionRef}
+      id="experience"
+      className="py-32 max-w-7xl mx-auto px-6 lg:px-10 relative"
+    >
+      {/* Floating scroll-driven avatar (desktop only) */}
+      <motion.div
+        style={{
+          rotate: avatarRotate,
+          scale: avatarScale,
+          y: avatarY,
+          opacity: avatarOpacity,
+        }}
+        className="hidden xl:block fixed top-1/2 -translate-y-1/2 right-8 z-30 pointer-events-none"
+      >
+        <div className="relative w-32 h-32">
+          <div className="absolute -inset-4 bg-gradient-accent opacity-40 blur-2xl rounded-full" />
+          <div className="relative h-full w-full overflow-hidden rounded-full border-2 border-primary/50 shadow-glow bg-card">
+            <img src={portrait} alt="" className="h-full w-full object-cover" />
+          </div>
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute -inset-3 rounded-full border border-dashed border-primary/40"
+          />
+          <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-primary animate-glow-pulse shadow-glow" />
+        </div>
+      </motion.div>
+
       <div className="mb-20">
         <p className="font-mono text-xs uppercase tracking-[0.3em] text-primary mb-6">
           04 — Experience
