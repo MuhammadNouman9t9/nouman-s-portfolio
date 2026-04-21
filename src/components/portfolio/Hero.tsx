@@ -71,12 +71,10 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed"
           >
-            Senior full stack developer with{" "}
-            <span className="text-foreground font-medium">7+ years</span> shipping
-            scalable web platforms — from architecture to pixel-perfect interfaces.
+            AI / ML & LLM engineer with{" "}
+            <span className="text-foreground font-medium">8+ years</span> shipping
+            production Python and DevOps systems — from data pipelines to LLM-powered products.
           </motion.p>
-
-
 
           <motion.div
             initial={{ opacity: 0 }}
@@ -85,9 +83,9 @@ export const Hero = () => {
             className="grid grid-cols-3 gap-6 pt-10 max-w-md"
           >
             {[
-              { v: "7+", l: "Years" },
-              { v: "200+", l: "Projects" },
-              { v: "12", l: "Industries" },
+              { v: "8+", l: "Years" },
+              { v: "50+", l: "AI / ML projects" },
+              { v: "20+", l: "LLM apps" },
             ].map((s) => (
               <div key={s.l} className="border-l border-border pl-4">
                 <div className="font-display text-3xl font-semibold">{s.v}</div>
