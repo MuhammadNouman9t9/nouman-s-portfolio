@@ -42,10 +42,7 @@ const roles = [
     company: "Freelance",
     desc: "Built custom WordPress and React sites for SMBs. First taste of production responsibility.",
     icon: Code2,
-    metrics: [
-      { v: "30+", l: "Sites delivered" },
-      { v: "2 yrs", l: "Solo journey" },
-    ],
+    metrics: [],
   },
 ];
 
@@ -87,6 +84,7 @@ const RoleCard = ({
             {r.desc}
           </p>
 
+          {r.metrics.length > 0 && (
           <div className={`flex gap-6 mt-5 pt-4 border-t border-border ${right ? "lg:justify-end" : ""}`}>
             {r.metrics.map((m) => (
               <div key={m.l}>
@@ -99,6 +97,7 @@ const RoleCard = ({
               </div>
             ))}
           </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -125,6 +124,7 @@ export const Experience = () => {
           Seven years, one obsession: shipping well.
         </h2>
       </div>
+
 
       <div ref={ref} className="relative">
         {/* Timeline track */}
