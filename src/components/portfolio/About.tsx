@@ -36,53 +36,6 @@ const techStack = [
   { name: "AWS", color: "#FF9900", letter: "aws" },
 ];
 
-const expertise = [
-  {
-    icon: Code,
-    title: "Frontend",
-    items: ["React", "Next", "Vue", "Angular", "TS", "Tailwind"],
-  },
-  {
-    icon: Server,
-    title: "Backend",
-    items: ["Node", "NestJS", "Laravel", "Flask"],
-  },
-  {
-    icon: Brain,
-    title: "AI / ML",
-    items: ["Python", "LLMs", "Pandas", "ML"],
-  },
-  {
-    icon: Database,
-    title: "Databases",
-    items: ["MySQL", "MongoDB", "SQL", "NoSQL"],
-  },
-  {
-    icon: Plug,
-    title: "APIs & Auth",
-    items: ["REST", "GraphQL", "JWT", "OAuth"],
-  },
-  {
-    icon: Cloud,
-    title: "Cloud & DevOps",
-    items: ["AWS", "Firebase", "Docker", "CI/CD"],
-  },
-  {
-    icon: Network,
-    title: "Architecture",
-    items: ["Microservices", "System Design"],
-  },
-  {
-    icon: ShoppingBag,
-    title: "CMS & eCommerce",
-    items: ["WordPress", "WooCommerce", "Shopify"],
-  },
-  {
-    icon: GitBranch,
-    title: "Tools",
-    items: ["Git", "GitHub", "Agile", "Code Review"],
-  },
-];
 
 const stats = [
   { icon: Award, value: "8+", label: "Years of Experience" },
