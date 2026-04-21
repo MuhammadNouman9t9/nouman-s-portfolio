@@ -84,6 +84,7 @@ const RoleCard = ({
             {r.desc}
           </p>
 
+          {r.metrics.length > 0 && (
           <div className={`flex gap-6 mt-5 pt-4 border-t border-border ${right ? "lg:justify-end" : ""}`}>
             {r.metrics.map((m) => (
               <div key={m.l}>
