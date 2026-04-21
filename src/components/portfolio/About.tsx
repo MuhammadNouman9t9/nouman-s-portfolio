@@ -1,150 +1,293 @@
 import { motion } from "framer-motion";
-import { Brain, Cpu, Sparkles, Server } from "lucide-react";
+import {
+  Award,
+  FolderOpen,
+  Code2,
+  Globe,
+  Lightbulb,
+  Send,
+  Layers,
+  Server,
+  Brain,
+  MessageSquare,
+  Database,
+  Cloud,
+  ShoppingBag,
+} from "lucide-react";
+import avatar from "@/assets/avatar.jpg";
 
-const focus = [
+const techStack = [
+  { name: "JavaScript", color: "#F7DF1E", letter: "JS" },
+  { name: "TypeScript", color: "#3178C6", letter: "TS" },
+  { name: "React.js", color: "#61DAFB", letter: "⚛" },
+  { name: "Next.js", color: "#FFFFFF", letter: "N" },
+  { name: "Vue.js", color: "#42B883", letter: "V" },
+  { name: "Node.js", color: "#8CC84B", letter: "⬢" },
+  { name: "Express.js", color: "#FFFFFF", letter: "ex" },
+  { name: "NestJS", color: "#E0234E", letter: "N" },
+  { name: "Python", color: "#3776AB", letter: "🐍" },
+  { name: "Flask", color: "#FFFFFF", letter: "F" },
+  { name: "FastAPI", color: "#009688", letter: "≡" },
+  { name: "MongoDB", color: "#47A248", letter: "M" },
+  { name: "MySQL", color: "#4479A1", letter: "S" },
+  { name: "GraphQL", color: "#E10098", letter: "◈" },
+  { name: "REST API", color: "#0096FF", letter: "API" },
+  { name: "Pandas", color: "#150458", letter: "🐼" },
+  { name: "Databricks", color: "#FF3621", letter: "⬢" },
+  { name: "Docker", color: "#2496ED", letter: "🐳" },
+  { name: "Firebase", color: "#FFCA28", letter: "🔥" },
+  { name: "WordPress", color: "#21759B", letter: "W" },
+  { name: "Shopify", color: "#95BF47", letter: "S" },
+  { name: "Git", color: "#F05032", letter: "G" },
+  { name: "Linux", color: "#FCC624", letter: "🐧" },
+  { name: "AWS", color: "#FF9900", letter: "aws" },
+];
+
+const expertise = [
   {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    desc: "Designing, training, and deploying production ML models — from classical algorithms to deep learning pipelines.",
-  },
-  {
-    icon: Sparkles,
-    title: "LLM Engineering",
-    desc: "Building RAG systems, agentic workflows, fine-tuned models, and LLM-powered products with OpenAI, Anthropic, and open-source stacks.",
-  },
-  {
-    icon: Cpu,
-    title: "Python at Scale",
-    desc: "FastAPI, async services, data pipelines (Pandas, Polars, Airflow), and high-throughput backends powering ML systems.",
+    icon: Layers,
+    title: "Full Stack Development",
+    desc: "Building modern, responsive web applications using JavaScript/TypeScript ecosystem and robust backend technologies.",
   },
   {
     icon: Server,
-    title: "DevOps & MLOps",
-    desc: "Docker, Kubernetes, CI/CD, AWS/GCP, observability, and end-to-end MLOps pipelines for reliable, scalable deployments.",
+    title: "Backend & APIs",
+    desc: "Designing and developing scalable REST APIs and microservices using Node.js, Express.js, NestJS, Flask, and FastAPI.",
   },
+  {
+    icon: Brain,
+    title: "AI & Machine Learning",
+    desc: "Developing intelligent solutions with ML models, data processing, and automation using Python, Pandas, and cutting-edge tools.",
+  },
+  {
+    icon: MessageSquare,
+    title: "LLM & AI Applications",
+    desc: "Building chatbots and AI apps using LLMs, RAG, embeddings, vector databases, and prompt engineering techniques.",
+  },
+  {
+    icon: Database,
+    title: "Databases",
+    desc: "Working with SQL & NoSQL databases like MySQL, MongoDB and implementing GraphQL for efficient data handling.",
+  },
+  {
+    icon: Cloud,
+    title: "DevOps & Deployment",
+    desc: "Containerization with Docker, deployment on Firebase, CI/CD workflows and cloud infrastructure management.",
+  },
+  {
+    icon: ShoppingBag,
+    title: "CMS & eCommerce",
+    desc: "Building and managing websites using WordPress and Shopify with complete customization and integrations.",
+  },
+];
+
+const stats = [
+  { icon: Award, value: "8+", label: "Years of Experience" },
+  { icon: FolderOpen, value: "50+", label: "Projects Completed" },
+  { icon: Code2, value: "AI & Full Stack", label: "Specialized" },
+  { icon: Globe, value: "Remote", label: "Work Preference" },
+  { icon: Lightbulb, value: "Problem Solver", label: "Lifelong Learner" },
 ];
 
 export const About = () => {
   return (
     <section
       id="about"
-      className="relative py-32 max-w-6xl mx-auto px-6 lg:px-10"
+      className="relative py-24 max-w-7xl mx-auto px-6 lg:px-10"
     >
-      <motion.p
+      {/* Header */}
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="font-mono text-xs uppercase tracking-[0.4em] text-primary mb-10"
+        className="flex items-center gap-3 mb-8"
       >
-        01 — About me
-      </motion.p>
+        <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+        <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
+          About Me
+        </span>
+      </motion.div>
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight leading-[1.25] text-foreground max-w-5xl"
-      >
-        I'm{" "}
-        <span className="text-gradient-accent font-semibold">Muhammad Nouman</span>
-        , a{" "}
-        <span className="text-foreground">Senior Full Stack Developer</span> with{" "}
-        <span className="text-foreground">8+ years</span> of experience building scalable, high-performance web applications and intelligent AI-driven solutions.
-      </motion.h2>
+      {/* Top grid: bio + profile card */}
+      <div className="grid lg:grid-cols-[1.4fr_1fr] gap-10 items-start">
+        {/* Left: Bio */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+        >
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-foreground">
+            Senior Full Stack Developer
+            <br />
+            <span className="text-gradient-accent">& AI Solutions Builder</span>
+          </h2>
 
+          <div className="mt-8 space-y-5 text-base text-muted-foreground leading-relaxed max-w-2xl">
+            <p>
+              I'm a Senior Full Stack Developer with{" "}
+              <span className="text-foreground font-medium">8+ years</span> of
+              experience building scalable, high-performance web applications and
+              AI-powered solutions. I enjoy turning complex problems into simple,
+              efficient, and beautiful digital experiences.
+            </p>
+            <p>
+              I specialize in modern web technologies, backend systems, APIs,
+              databases, and cloud deployment. I also have strong hands-on
+              experience in Artificial Intelligence, Machine Learning, and
+              LLM-based applications — including chatbot development, RAG,
+              embeddings, and automation workflows.
+            </p>
+            <p>
+              I'm passionate about clean code, system design, and leveraging
+              emerging technologies to build intelligent solutions that create
+              real impact.
+            </p>
+          </div>
+
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-lg bg-gradient-accent text-primary-foreground font-medium text-sm shadow-glow transition-all"
+          >
+            <Send size={16} />
+            Let's Connect
+          </motion.a>
+        </motion.div>
+
+        {/* Right: Profile card */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="relative bg-card border border-border rounded-2xl p-8 shadow-card overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent pointer-events-none" />
+
+          <div className="relative flex flex-col items-center">
+            <div className="relative w-40 h-40 rounded-full overflow-hidden ring-2 ring-primary/40 shadow-glow">
+              <img
+                src={avatar}
+                alt="Muhammad Nouman avatar"
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="relative mt-8 space-y-5">
+            {stats.map((s) => {
+              const Icon = s.icon;
+              return (
+                <div key={s.label} className="flex items-center gap-4">
+                  <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
+                    <Icon size={18} className="text-primary" strokeWidth={1.8} />
+                  </div>
+                  <div>
+                    <div className="font-display text-base font-semibold text-foreground leading-tight">
+                      {s.value}
+                    </div>
+                    <div className="text-xs text-muted-foreground mt-0.5">
+                      {s.label}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Tech Stack */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, delay: 0.15 }}
-        className="mt-10 space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl"
+        transition={{ duration: 0.6 }}
+        className="mt-20"
       >
-        <p>
-          I specialize in modern frontend technologies like React.js, Angular, Next.js, and Vue.js, 
-          combined with powerful backend development using Node.js, NestJS, Flask, FastAPI, and Laravel.
-        </p>
-        <p>
-          My expertise extends beyond traditional development into Artificial Intelligence and Machine Learning, 
-          where I design and build LLM-powered applications, chatbots, and automation systems using techniques 
-          like RAG, embeddings, and model integration.
-        </p>
-        <p>
-          I have hands-on experience working with data processing tools such as Pandas and building efficient 
-          RESTful and GraphQL APIs for complex, data-driven systems. I'm also experienced in working with both 
-          SQL and NoSQL databases, architecting microservices, and deploying applications using modern DevOps 
-          practices with Docker and cloud platforms like Firebase.
-        </p>
-        <p>
-          I focus on writing clean, scalable code and delivering end-to-end solutions — from concept to deployment. 
-          I'm passionate about solving real-world problems using technology and continuously exploring new 
-          advancements in AI and software development.
-        </p>
-      </motion.div>
+        <div className="flex items-center gap-3 mb-6">
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
+            {"</>"} Tech Stack
+          </span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
 
-      {/* Focus areas */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, delay: 0.25 }}
-        className="grid sm:grid-cols-2 gap-5 mt-16"
-      >
-        {focus.map((f, i) => {
-          const Icon = f.icon;
-          return (
+        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-12 gap-3">
+          {techStack.map((tech, i) => (
             <motion.div
-              key={f.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: 0.1 * i }}
+              key={tech.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.02 }}
               whileHover={{ y: -4 }}
-              className="group relative bg-card border border-border hover:border-primary/40 p-6 transition-all duration-500 overflow-hidden"
+              className="group flex flex-col items-center justify-center gap-2 p-3 rounded-xl bg-card border border-border hover:border-primary/50 transition-all duration-300"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative flex items-start gap-4">
-                <div className="shrink-0 w-11 h-11 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <Icon size={20} strokeWidth={1.6} className="text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-display text-lg font-semibold tracking-tight">
-                    {f.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-                    {f.desc}
-                  </p>
-                </div>
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm"
+                style={{
+                  background: `${tech.color}20`,
+                  color: tech.color,
+                  border: `1px solid ${tech.color}40`,
+                }}
+              >
+                {tech.letter}
               </div>
+              <span className="text-[10px] text-muted-foreground group-hover:text-foreground transition-colors text-center leading-tight">
+                {tech.name}
+              </span>
             </motion.div>
-          );
-        })}
+          ))}
+        </div>
       </motion.div>
 
-      {/* Stats */}
+      {/* Expertise */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, delay: 0.3 }}
-        className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-10 border-t border-border"
+        transition={{ duration: 0.6 }}
+        className="mt-16"
       >
-        {[
-          { v: "8+", l: "Years" },
-          { v: "50+", l: "AI / ML projects" },
-          { v: "20+", l: "LLM apps shipped" },
-          { v: "30+", l: "Clients" },
-        ].map((s) => (
-          <div key={s.l}>
-            <div className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
-              {s.v}
-            </div>
-            <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground mt-2">
-              {s.l}
-            </div>
-          </div>
-        ))}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="font-mono text-xs uppercase tracking-[0.3em] text-primary">
+            ✦ Expertise
+          </span>
+          <div className="flex-1 h-px bg-border" />
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+          {expertise.map((e, i) => {
+            const Icon = e.icon;
+            return (
+              <motion.div
+                key={e.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+                whileHover={{ y: -4 }}
+                className="group relative bg-card border border-border hover:border-primary/40 rounded-xl p-5 transition-all duration-300"
+              >
+                <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center mb-3 group-hover:bg-primary/20 transition-colors">
+                  <Icon size={18} className="text-primary" strokeWidth={1.8} />
+                </div>
+                <h3 className="font-display text-sm font-semibold tracking-tight text-foreground mb-2">
+                  {e.title}
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {e.desc}
+                </p>
+              </motion.div>
+            );
+          })}
+        </div>
       </motion.div>
     </section>
   );
