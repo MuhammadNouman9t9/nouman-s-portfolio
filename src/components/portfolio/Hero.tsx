@@ -71,9 +71,8 @@ export const Hero = () => {
             transition={{ duration: 0.7, delay: 0.3 }}
             className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed"
           >
-            AI / ML & LLM engineer with{" "}
-            <span className="text-foreground font-medium">8+ years</span> shipping
-            production Python and DevOps systems — from data pipelines to LLM-powered products.
+            Full Stack & AI Engineer crafting high-performance applications, APIs, and LLM-powered solutions.
+            Expert in Python, DevOps, and modern web technologies.
           </motion.p>
 
           <motion.div
