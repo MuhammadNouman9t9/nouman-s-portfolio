@@ -21,13 +21,14 @@ import {
   SiShopify,
   SiGit,
   SiLinux,
-  SiAmazon,
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
+import type { IconType } from "react-icons";
 
 type Tech = {
   name: string;
-  Icon: React.ComponentType<{ className?: string; size?: number }>;
+  Icon: IconType;
   color: string;
 };
 
