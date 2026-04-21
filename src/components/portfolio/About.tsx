@@ -49,12 +49,9 @@ export const About = () => {
       >
         I'm{" "}
         <span className="text-gradient-accent font-semibold">Muhammad Nouman</span>
-        , an{" "}
-        <span className="text-foreground">AI / ML &amp; LLM engineer</span> with{" "}
-        <span className="text-foreground">8+ years</span> of experience shipping{" "}
-        <span className="text-foreground">Python</span> and{" "}
-        <span className="text-foreground">DevOps</span> systems for startups, agencies,
-        and scale-ups.
+        , a{" "}
+        <span className="text-foreground">Senior Full Stack Developer</span> with{" "}
+        <span className="text-foreground">8+ years</span> of experience building scalable, high-performance web applications and intelligent AI-driven solutions.
       </motion.h2>
 
       <motion.div
@@ -65,16 +62,24 @@ export const About = () => {
         className="mt-10 space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl"
       >
         <p>
-          I architect end-to-end intelligent systems — from data pipelines and
-          model training to LLM-powered APIs, retrieval-augmented generation, and
-          production deployment on Kubernetes.
+          I specialize in modern frontend technologies like React.js, Angular, Next.js, and Vue.js, 
+          combined with powerful backend development using Node.js, NestJS, Flask, FastAPI, and Laravel.
         </p>
         <p>
-          I care about{" "}
-          <span className="text-foreground">
-            reproducibility, observability, and reliability
-          </span>{" "}
-          in ML — and treat MLOps as a first-class discipline, not an afterthought.
+          My expertise extends beyond traditional development into Artificial Intelligence and Machine Learning, 
+          where I design and build LLM-powered applications, chatbots, and automation systems using techniques 
+          like RAG, embeddings, and model integration.
+        </p>
+        <p>
+          I have hands-on experience working with data processing tools such as Pandas and building efficient 
+          RESTful and GraphQL APIs for complex, data-driven systems. I'm also experienced in working with both 
+          SQL and NoSQL databases, architecting microservices, and deploying applications using modern DevOps 
+          practices with Docker and cloud platforms like Firebase.
+        </p>
+        <p>
+          I focus on writing clean, scalable code and delivering end-to-end solutions — from concept to deployment. 
+          I'm passionate about solving real-world problems using technology and continuously exploring new 
+          advancements in AI and software development.
         </p>
       </motion.div>
 
