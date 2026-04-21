@@ -1,7 +1,6 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Briefcase, Sparkles, Rocket, Code2 } from "lucide-react";
-import portrait from "@/assets/nouman-portrait.jpg";
 
 const roles = [
   {
