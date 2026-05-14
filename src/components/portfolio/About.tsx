@@ -38,7 +38,7 @@ const techStack = [
 
 
 const stats = [
-  { icon: Award, value: "8+", label: "Years of Experience" },
+  { icon: Award, value: "6+", label: "Years of Experience" },
   { icon: FolderOpen, value: "50+", label: "Projects Completed" },
   { icon: Code2, value: "AI & Full Stack", label: "Specialized" },
   { icon: Globe, value: "Remote", label: "Work Preference" },
@@ -83,7 +83,7 @@ export const About = () => {
           <div className="mt-8 space-y-5 text-base text-muted-foreground leading-relaxed max-w-2xl">
             <p>
               I'm a Senior Full Stack Developer with{" "}
-              <span className="text-foreground font-medium">8+ years</span> of
+              <span className="text-foreground font-medium">6+ years</span> of
               experience building scalable, high-performance web applications and
               AI-powered solutions. I enjoy turning complex problems into simple,
               efficient, and beautiful digital experiences.
