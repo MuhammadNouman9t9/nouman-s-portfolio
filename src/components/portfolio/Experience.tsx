@@ -4,44 +4,55 @@ import { Briefcase, Sparkles, Rocket, Code2 } from "lucide-react";
 
 const roles = [
   {
-    period: "2023 — Present",
-    role: "Senior Full Stack Developer",
-    company: "Independent / Contract",
-    desc: "Leading end-to-end builds for fintech and SaaS clients. Architecture, hiring, mentorship.",
+    period: "Jul 2025 — Present",
+    role: "Senior Python Engineer",
+    company: "Exact Solution Electronics · United States",
+    desc: "Leading backend and AI-driven product teams. Architecting LLM-powered systems with Django, Flask, and FastAPI; integrating OpenAI and NLP tools into production; mentoring engineers across Agile cycles.",
     icon: Sparkles,
     metrics: [
-      { v: "12+", l: "Clients shipped" },
-      { v: "99.9%", l: "Uptime delivered" },
+      { v: "LLM", l: "Production systems" },
+      { v: "Lead", l: "Backend & AI team" },
     ],
   },
   {
-    period: "2021 — 2023",
-    role: "Lead Engineer",
-    company: "Nimbus Studio",
-    desc: "Owned platform team of 5. Migrated monolith to service-oriented architecture, cut deploy time 70%.",
+    period: "Aug 2023 — Sep 2025",
+    role: "Python Backend Developer",
+    company: "Jan Japan · Kōbe-shi, Hyogo",
+    desc: "Built scalable Python (Django / Flask) backends and RESTful APIs. Designed LLM-based chatbots, integrated OpenAI APIs, and shipped real-time AI experiences with cross-functional international teams.",
     icon: Rocket,
     metrics: [
-      { v: "5", l: "Engineers led" },
-      { v: "70%", l: "Faster deploys" },
+      { v: "RAG", l: "Chatbots shipped" },
+      { v: "API", l: "Microservices built" },
     ],
   },
   {
-    period: "2019 — 2021",
-    role: "Full Stack Engineer",
-    company: "Devhouse Labs",
-    desc: "Shipped 18 client products across React, Node, and AWS. Introduced design system and CI pipelines.",
+    period: "Jun 2021 — Jul 2023",
+    role: "Senior Full Stack Developer",
+    company: "Comando Software SAS · Armenia",
+    desc: "Led a full-stack team building Django/Flask backends and React frontends. Delivered AI/ML and data-driven products end-to-end, owning architecture, performance, and client requirements.",
     icon: Briefcase,
     metrics: [
-      { v: "18", l: "Products shipped" },
-      { v: "1", l: "Design system built" },
+      { v: "Lead", l: "Full-stack team" },
+      { v: "AI/ML", l: "Solutions delivered" },
     ],
   },
   {
-    period: "2017 — 2019",
-    role: "Web Developer",
-    company: "Freelance",
-    desc: "Built custom WordPress and React sites for SMBs. First taste of production responsibility.",
+    period: "Jul 2019 — May 2021",
+    role: "Senior Full Stack Developer",
+    company: "QMCC · Lahore",
+    desc: "Designed and shipped scalable full-stack apps with Python, Node.js, and React. Built REST APIs, integrated payments and CRMs, and hardened auth, security, and deployment on cloud/VPS.",
     icon: Code2,
+    metrics: [
+      { v: "REST", l: "APIs delivered" },
+      { v: "Cloud", l: "Deploys owned" },
+    ],
+  },
+  {
+    period: "Dec 2018 — Jun 2019",
+    role: "Full Stack Developer",
+    company: "HexaClicks · Lahore",
+    desc: "Built React, Angular, Node, and Laravel apps with MySQL and MongoDB. Implemented JWT auth, RESTful APIs, and clean reusable code in a fast-moving Agile environment.",
+    icon: Briefcase,
     metrics: [],
   },
 ];
@@ -121,7 +132,7 @@ export const Experience = () => {
           04 — Experience
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-          Seven years, one obsession: shipping well.
+          Eight years, one obsession: shipping well.
         </h2>
       </div>
 
