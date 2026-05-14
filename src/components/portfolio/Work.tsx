@@ -5,15 +5,25 @@ import { ArrowUpRight, Plus } from "lucide-react";
 const projects = [
   {
     n: "01",
+    title: "Mr. Singh's Pizza — Canadian Food Brand",
+    role: "Full Stack (Comando Software SAS)",
+    year: "2022",
+    desc: "Online ordering & delivery platform for a fast-growing 100% vegetarian Canadian pizza chain — multi-location menu, checkout, and franchise flow.",
+    tags: ["Full Stack", "REST APIs", "React", "Node"],
+    gradient: "from-primary/30 via-primary/10 to-transparent",
+    url: "https://mrsinghspizza.ca/",
+  },
+  {
+    n: "02",
     title: "Lendora — Fintech Dashboard",
     role: "Lead Full Stack",
     year: "2024",
     desc: "Real-time lending analytics platform serving 50k+ borrowers with sub-200ms p95 latency.",
     tags: ["Next.js", "Node", "PostgreSQL", "Redis"],
-    gradient: "from-primary/30 via-primary/10 to-transparent",
+    gradient: "from-fuchsia-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "02",
+    n: "03",
     title: "Northwind Commerce",
     role: "Senior Engineer",
     year: "2023",
@@ -22,7 +32,7 @@ const projects = [
     gradient: "from-fuchsia-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "03",
+    n: "04",
     title: "Atlas Health Portal",
     role: "Full Stack",
     year: "2022",
@@ -31,7 +41,7 @@ const projects = [
     gradient: "from-violet-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "04",
+    n: "05",
     title: "Forge CMS",
     role: "Founding Engineer",
     year: "2021",
@@ -40,7 +50,7 @@ const projects = [
     gradient: "from-purple-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "05",
+    n: "06",
     title: "Pulse Analytics",
     role: "Senior Engineer",
     year: "2024",
@@ -49,7 +59,7 @@ const projects = [
     gradient: "from-indigo-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "06",
+    n: "07",
     title: "Mosaic AI Studio",
     role: "Full Stack + AI",
     year: "2024",
@@ -58,7 +68,7 @@ const projects = [
     gradient: "from-pink-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "07",
+    n: "08",
     title: "Drift eCommerce",
     role: "Tech Lead",
     year: "2022",
@@ -67,7 +77,7 @@ const projects = [
     gradient: "from-rose-500/25 via-primary/10 to-transparent",
   },
   {
-    n: "08",
+    n: "09",
     title: "Ledger SaaS",
     role: "Backend Lead",
     year: "2021",
@@ -100,7 +110,9 @@ export const Work = () => {
           {visible.map((p, i) => (
             <motion.a
               key={p.n}
-              href="#contact"
+              href={(p as any).url ?? "#contact"}
+              target={(p as any).url ? "_blank" : undefined}
+              rel={(p as any).url ? "noopener noreferrer" : undefined}
               layout
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
