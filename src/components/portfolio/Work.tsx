@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
+import mrSinghsPizza from "@/assets/project-mrsinghs-pizza.png";
 
 const projects = [
   {
@@ -12,6 +13,7 @@ const projects = [
     tags: ["Full Stack", "REST APIs", "React", "Node"],
     gradient: "from-primary/30 via-primary/10 to-transparent",
     url: "https://mrsinghspizza.ca/",
+    image: mrSinghsPizza,
   },
   {
     n: "02",
@@ -122,6 +124,15 @@ export const Work = () => {
             >
               {/* Visual header */}
               <div className={`relative aspect-[16/10] bg-gradient-to-br ${p.gradient} overflow-hidden border-b border-border`}>
+                {(p as any).image && (
+                  <img
+                    src={(p as any).image}
+                    alt={`${p.title} preview`}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.2),transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                 <div className="absolute top-4 left-4 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
                   {p.n} / {String(total).padStart(2, "0")}
