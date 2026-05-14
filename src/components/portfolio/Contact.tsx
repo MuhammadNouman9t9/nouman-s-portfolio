@@ -24,10 +24,10 @@ export const Contact = () => {
         <div className="mt-16 grid lg:grid-cols-12 gap-12 items-end">
           <div className="lg:col-span-6">
             <a
-              href="mailto:nouman@example.com"
+              href="mailto:mnoumandev07@gmail.com"
               className="group inline-flex items-center gap-4 font-display text-2xl md:text-4xl font-semibold tracking-tight border-b border-border pb-3 hover:border-primary transition-colors duration-300"
             >
-              nouman@example.com
+              mnoumandev07@gmail.com
               <span className="text-primary group-hover:translate-x-2 transition-transform duration-500">
                 →
               </span>
@@ -40,10 +40,10 @@ export const Contact = () => {
 
           <div className="lg:col-span-5 lg:col-start-8 grid grid-cols-2 gap-4">
             {[
-              { l: "GitHub", h: "#" },
-              { l: "LinkedIn", h: "#" },
-              { l: "Twitter / X", h: "#" },
-              { l: "Read.cv", h: "#" },
+              { l: "GitHub", h: "https://github.com/MuhammadNouman9t9" },
+              { l: "LinkedIn", h: "https://www.linkedin.com/in/mnouman124" },
+              { l: "Email", h: "mailto:mnoumandev07@gmail.com" },
+              { l: "Lahore, PK", h: "#" },
             ].map((s) => (
               <a
                 key={s.l}
