@@ -38,9 +38,9 @@ const roles = [
   },
   {
     period: "Jul 2019 — May 2021",
-    role: "Senior Full Stack Developer",
-    company: "QMCC · Lahore",
-    desc: "Designed and shipped scalable full-stack apps with Python, Node.js, and React. Built REST APIs, integrated payments and CRMs, and hardened auth, security, and deployment on cloud/VPS.",
+    role: "Full Stack Developer",
+    company: "Sumato Solutions · Lahore",
+    desc: "Designed and shipped scalable full-stack apps with Python (Django/Flask), Node.js, and React. Built REST APIs, integrated payments and CRMs, and hardened auth, security, and deployment on cloud/VPS.",
     icon: Code2,
     metrics: [
       { v: "REST", l: "APIs delivered" },
@@ -132,7 +132,7 @@ export const Experience = () => {
           04 — Experience
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-          Eight years, one obsession: shipping well.
+          Six years, one obsession: shipping well.
         </h2>
       </div>
 
