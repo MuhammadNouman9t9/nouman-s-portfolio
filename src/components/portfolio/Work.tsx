@@ -8,6 +8,7 @@ import onlineLegal from "@/assets/project-online-legal.png";
 import janJapan from "@/assets/project-jan-japan.png";
 import exactflow from "@/assets/project-exactflow.png";
 import contractorplus from "@/assets/project-contractorplus.png";
+import fastapiTemplate from "@/assets/project-fastapi-template.png";
 
 const projects = [
   {
