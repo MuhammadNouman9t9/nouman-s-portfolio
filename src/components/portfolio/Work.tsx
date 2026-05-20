@@ -8,6 +8,7 @@ import onlineLegal from "@/assets/project-online-legal.png";
 import janJapan from "@/assets/project-jan-japan.png";
 import exactflow from "@/assets/project-exactflow.png";
 import contractorplus from "@/assets/project-contractorplus.png";
+import fastapiTemplate from "@/assets/project-fastapi-template.png";
 
 const projects = [
   {
@@ -95,6 +96,17 @@ const projects = [
     gradient: "from-emerald-500/25 via-primary/10 to-transparent",
     url: "https://contractorplus.app/",
     image: contractorplus,
+  },
+  {
+    n: "09",
+    title: "Full Stack FastAPI Template — JWT Auth & Dockerized Stack",
+    role: "Open Source / Full Stack",
+    year: "2024",
+    desc: "Modern full-stack template with FastAPI, React, PostgreSQL, and Docker — JWT authentication, user management, and production-ready deployment.",
+    tags: ["FastAPI", "React", "PostgreSQL", "Docker"],
+    gradient: "from-teal-500/25 via-primary/10 to-transparent",
+    url: "https://github.com/fastapi/full-stack-fastapi-template",
+    image: fastapiTemplate,
   },
 ];
 
