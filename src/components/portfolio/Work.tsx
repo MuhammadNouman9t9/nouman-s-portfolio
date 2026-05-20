@@ -105,7 +105,7 @@ const projects = [
     desc: "Modern full-stack template with FastAPI, React, PostgreSQL, and Docker — JWT authentication, user management, and production-ready deployment.",
     tags: ["FastAPI", "React", "PostgreSQL", "Docker"],
     gradient: "from-teal-500/25 via-primary/10 to-transparent",
-    url: "https://github.com/fastapi/full-stack-fastapi-template",
+    url: "https://fastapi.tiangolo.com/",
     image: fastapiTemplate,
   },
 ];
