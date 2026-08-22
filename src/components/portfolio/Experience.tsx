@@ -140,7 +140,7 @@ export const Experience = () => {
           04 — Experience
         </p>
         <h2 className="font-display text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-          Six years, one obsession: shipping well.
+          Five years, one obsession: shipping well.
         </h2>
       </div>
 
