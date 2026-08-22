@@ -82,7 +82,7 @@ export const Hero = () => {
             className="grid grid-cols-3 gap-6 pt-10 max-w-md"
           >
             {[
-              { v: "6+", l: "Years" },
+              { v: "5+", l: "Years" },
               { v: "189+", l: "AI / ML projects" },
               { v: "20+", l: "LLM apps" },
             ].map((s) => (
