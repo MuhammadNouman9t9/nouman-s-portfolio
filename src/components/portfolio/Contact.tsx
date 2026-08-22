@@ -40,7 +40,7 @@ export const Contact = () => {
 
           <div className="lg:col-span-5 lg:col-start-8 grid grid-cols-2 gap-4">
             {[
-              { l: "GitHub", h: "https://github.com/MuhammadNouman9t9" },
+              { l: "GitHub", h: "https://github.com/mnoumandev07" },
               { l: "LinkedIn", h: "https://www.linkedin.com/in/mnouman124" },
               { l: "Email", h: "mailto:mnoumandev07@gmail.com" },
               { l: "Lahore, PK", h: "#" },
