@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import portraitAsset from "@/assets/nouman-hero.png.asset.json";
+
 
 export const Hero = () => {
   const portraitRef = useRef<HTMLDivElement>(null);
@@ -119,7 +119,7 @@ export const Hero = () => {
               style={{ transform: "translateZ(40px)" }}
             >
               <img
-                src={portraitAsset.url}
+                src="/profile.jpg"
                 alt="Muhammad Nouman, senior full stack developer portrait"
                 width={1024}
                 height={1280}
