@@ -119,7 +119,7 @@ export const Hero = () => {
               style={{ transform: "translateZ(40px)" }}
             >
               <img
-                src={portraitAsset.url}
+                src="/profile.jpg"
                 alt="Muhammad Nouman, senior full stack developer portrait"
                 width={1024}
                 height={1280}
