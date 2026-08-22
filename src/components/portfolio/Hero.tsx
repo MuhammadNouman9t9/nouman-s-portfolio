@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import portrait from "@/assets/nouman-portrait.jpg";
+import portraitAsset from "@/assets/nouman-hero.png.asset.json";
 
 export const Hero = () => {
   const portraitRef = useRef<HTMLDivElement>(null);
@@ -108,7 +108,7 @@ export const Hero = () => {
             style={{ rotateX, rotateY, x: translateX, y: translateY, transformStyle: "preserve-3d" }}
             className="relative aspect-[4/5] max-w-sm mx-auto group"
           >
-            {/* Soft purple glow — follows tilt */}
+            {/* Soft blue glow — follows tilt */}
             <div className="absolute -inset-6 bg-gradient-accent opacity-30 blur-3xl rounded-[3rem] group-hover:opacity-50 transition-opacity duration-700" />
             {/* Decorative ring */}
             <div className="absolute -inset-2 rounded-3xl border border-primary/20" />
@@ -119,7 +119,7 @@ export const Hero = () => {
               style={{ transform: "translateZ(40px)" }}
             >
               <img
-                src={portrait}
+                src={portraitAsset.url}
                 alt="Muhammad Nouman, senior full stack developer portrait"
                 width={1024}
                 height={1280}
