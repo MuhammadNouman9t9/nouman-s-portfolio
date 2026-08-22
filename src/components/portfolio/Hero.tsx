@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import portraitAsset from "@/assets/nouman-hero.png.asset.json";
+
 
 export const Hero = () => {
   const portraitRef = useRef<HTMLDivElement>(null);
